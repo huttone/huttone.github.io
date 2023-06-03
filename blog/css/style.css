@@ -1,0 +1,243 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+/* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/*imported fonts*/
+
+
+@font-face {
+    font-family: "josefinslab";
+    src: url(fonts\serif\josefinslab-regular.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "lato";
+    src: url(fonts\sans-serif\lato-regular) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "opensans";
+    src: url(fonts\sans-serif\opensans-regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*typography*/
+
+p,
+h3,
+h4 {
+    font-family: opensans, Arial, Helvetica, sans-serif;
+    padding-right: 0.025rem;
+}
+
+h1,
+h2,
+.highlight {
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+h1,
+.highlight {
+    word-spacing: -8px;
+    letter-spacing: 1px;
+    font-size: 8vw;
+    padding: -1rem;
+}
+
+h1 {
+    transform: rotate(-5deg);
+}
+
+.highlight {
+    font-weight: bold;
+    display: inline-block;
+    border: 0.25rem solid rgb(16, 16, 128);
+    background-color: rgb(128, 198, 255);
+    padding: 0.5rem 2rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 5px 5px 4px -1px rgb(8, 8, 64);
+    text-shadow: 0px 0px 2px rgb(16, 16, 128);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 1.5rem;
+    width: 90%;
+    min-width: 56.25rem;
+}
+
+button {
+    font-size: 3rem;
+    background-color: rgb(16, 16, 128);
+    color: whitesmoke;
+    text-shadow:0px 0px 8px white; /*you were right this text shadow thing is hard*/
+    border-radius: 1rem;
+    font-variant: small-caps;
+    font-family: josefinslab; /*i will not compromise on this font, it's really damm good i wish i added it sooner*/
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    box-shadow: 5px 5px 4px -1px rgb(8, 8, 64);
+}
+
+/*layout*/
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 0.25rem solid rgb(8, 8, 64);
+    padding-left: 1rem;
+}
+
+aside p {
+    border-bottom: 0.125rem solid rgb(8, 8, 64);
+    padding-bottom: 0.60rem;
+}
+
+.subsection {
+    display: flex;
+    max-width: 100%;
+}
+
+/*images and figures*/
+
+img {
+    width: 100%;
+}
+
+figure {
+    margin: 0px;
+}
+
+.article-image {
+    max-width: 37%;
+    float: left;
+    margin-right: 1rem;
+}
+
+.subsection {
+    margin: 1rem 0rem;
+}
+
+.subsection figure {
+    margin: 0rem 0.25rem;
+    background-color: beige;
+}
+
+.subsection figure figcaption {
+    padding: 0.5rem 0.75rem;
+
+}
+
+/*links and navigation*/
+a {
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem;
+    font-size: 1.5rem;
+    font-family: lato, Arial, Helvetica, sans-serif;
+    color: rgb(16, 16, 128);
+    size
+}
+
+nav {
+    border-top: 0.125rem solid rgb(8, 8, 64);
+    border-bottom: 0.125rem solid rgb(8, 8, 64);
+}
+
+nav a:link,
+nav a:visited {
+    color: #33658A;
+    text-decoration: normal;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: rgb(255, 198, 128);
+}
+
+nav a:focus {
+    color: rgb(128, 198, 255);
+    text-decoration: line-through;
+}

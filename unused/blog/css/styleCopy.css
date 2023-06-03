@@ -1,0 +1,113 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+
+/*Spacing*/
+
+
+
+
+
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  .centerText {
+    text-align: center;
+  }
+  
+  /*grid rules ====================================*/
+  .gridRules { 
+    /*text properties*/
+    font: size 12px;
+  
+    /*box design*/
+    background-color:#e0e0e0;
+    margin-left: 300px;
+    margin-top: 100px;
+    margin-right: 300px;
+    height: 500px;
+    padding:10px;
+    opacity: 0.8;
+    border-radius:12px;
+  
+    /*grid specific rules*/
+    display: grid;
+    
+    grid-template-columns:auto auto auto;
+    grid-template-rows:max-content auto; /*title, make margin below sligtly smaller*/
+  
+    /*grid-row: 1 / span 3;*/
+  
+    column-gap: 40px;
+  
+  }
+  
+  .columnHeader { 
+    font-size: 24px;
+    font: "Times"
+    
+  }
+  h2 {
+    column-span: all;
+    text-align: center;
+    font-weight: normal;
+    font-family:Georgia, 'Times New Roman', Times, serif
+  }
+  
+  .columnText { 
+    font-size: 20px;
+    font: "Calibri"
+  }

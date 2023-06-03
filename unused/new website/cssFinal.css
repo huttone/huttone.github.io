@@ -1,0 +1,110 @@
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.centerText {
+  text-align: center;
+}
+
+/*column rules =============================*/
+.columnRules { 
+  /*text properties*/
+  font: size 12px;
+
+  /*box design*/
+  background-color:#e0e0e0;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 500px;
+  padding:10px;
+  opacity: 0.8;
+  border-radius:12px;
+  /*column specific rules*/
+  column-count: 3;
+  column-rule-width: 8px;
+  column-gap: 40px;
+  column-rule-style: dashed;
+  column-rule-color: #707070;
+}
+
+/*grid rules ====================================*/
+.gridRules { 
+  /*text properties*/
+  font: size 12px;
+
+  /*box design*/
+  background-color:#e0e0e0;
+  margin-left: 300px;
+  margin-top: 100px;
+  margin-right: 300px;
+  height: 500px;
+  padding:10px;
+  opacity: 0.8;
+  border-radius:12px;
+
+  /*grid specific rules*/
+  display: grid;
+  
+  grid-template-columns:auto auto auto;
+  grid-template-rows:max-content auto; /*title, make margin below sligtly smaller*/
+
+
+  /*grid-row: 1 / span 3;*/
+
+  column-gap: 40px;
+
+}
+
+
+
+.columnHeader { 
+  font-size: 24px;
+  font: "Times"
+  
+}
+h2 {
+  column-span: all;
+  text-align: center;
+  font-weight: normal;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.columnText { 
+  font-size: 20px;
+  font: "Calibri"
+}
+
+.newRule {
+  /*importing solid js through conversion from react. make sure to be careful with compatibility. ensure that */
+}
+/*
+
+  column-count: 3;
+  column-gap: 40px;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-span: all;
+  column-rule: 1px solid lightblue;
+  column-rule-color: lightblue;
+
+
+
+  ============ that center textbox ============================================================
+align=justify style="background-color:#e0e0e0;
+border-radius:12px;
+font: size 24px;
+opacity: 0.8;
+padding:10px;
+height: 1000;
+margin:90px;">
+This is a Sample Textbox
+
+</b>
+
+</p>
